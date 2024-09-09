@@ -14,6 +14,8 @@ function open_purchase2()
     var purchase2 = document.getElementById("purchase2");
     var msg1 = document.getElementById("msg1");
 
+    var true_stock = 0;
+
     if (amount == "")
     {
         return;
